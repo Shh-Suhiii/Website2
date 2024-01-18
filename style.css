@@ -1,0 +1,350 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+    color: #e6e6e6;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    /* overflow: hidden; /* Prevent scrollbars due to stars animation */
+    background: linear-gradient(180deg, #000000, #002033);
+}
+
+
+/* Star and moon animation */
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(180deg, #000000, #002033);
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: twinkle 3s infinite;
+    opacity: 0;
+}
+
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.flex{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 300px;
+    padding-bottom: 265px;
+}
+
+.text{
+    font-size: 32pt;
+    line-height: 36pt;
+}
+
+.highlight{
+    color: rgb(227, 27, 109);
+}
+
+.container {    
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.button{
+    border: 2px solid rgb(255, 255, 255);
+    box-sizing: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13pt;
+    padding: 10px 20px;
+    transition: all 0.5s ease 0s;
+    margin: 25px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.navbar {
+    background-color: #000000;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: sticky
+}
+
+.nav-links {
+    margin: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+}
+
+.nav-hover:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20pc;
+    opacity: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {  
+    .navbar{
+        position: absolute;
+    }
+
+    .nav-links {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 20px 0 20px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Section styling */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Transparent box styling */
+.transparent-box {
+    background-color: rgb(0 0 0 / 41%);
+    padding: 50px 0 50px 0;
+    margin: 100px 20px 20px 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Portfolio item styling */
+.portfolio-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+
+.portfolio-item img{
+    width: 50%;
+
+}
+
+.gallery-portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px;
+}
+
+.card-portfolio{
+    width: auto;
+    margin: 20px;
+}
+
+.portfolio-item img:hover{
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
+}
+
+.portfolio-item img {
+    height: auto;
+    border: 1px solid #000000;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+/* Skills styling */
+#skills ul {
+    list-style: none;
+}
+
+#skills ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Project styling */
+.project {
+    margin-bottom: 30px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.card{
+    width: 276px;
+    height: 390px;
+    background-color: white;
+    margin: 12px;
+}
+
+.transparent-box-project{
+    background-color: rgb(0 0 0 / 41%);
+    padding: 50px 0 50px 0;
+    margin: 100px 20px 20px 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* Contact styling */
+#contact p {
+    margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #d6d6d6;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.form{
+    width: auto;
+    height: auto;
+    border: 4px solid rgb(255, 255, 255);
+    text-align: center;
+    padding: 90px;
+    border-radius: 40px;
+}
+
+.form:hover{
+    background-color: rgba(255, 255, 255, 0.082);
+    border-color: yellow;
+}
+
+.input{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+#message {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: left;
+    width: -webkit-fill-available;
+    border-radius: 20px;
+}
+
+#message:hover{
+    background-color: #0000004d;
+    color: white;
+}
+
+.input:hover{
+    background-color: #0000004d;
+    color: white;
+}
+
+.button{
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: rgb(155, 0, 0);
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px inset #ffff;
+}
+
+    
